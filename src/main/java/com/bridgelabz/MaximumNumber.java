@@ -1,5 +1,7 @@
 package com.bridgelabz;
 
+import java.util.Arrays;
+
 public class MaximumNumber<T> {
     T a;
     T b;
@@ -20,7 +22,7 @@ public class MaximumNumber<T> {
         return d;
     }
 
-    public  <T> T getMaxNumber() {
+    public <T> T getMaxNumber() {
         T result = (T) getMaxNumber(this.a, this.b, this.c);
         return result;
     }
@@ -29,6 +31,11 @@ public class MaximumNumber<T> {
         T d = (a.toString().compareTo(b.toString()) > 0 ? (a.toString().compareTo(c.toString()) > 0 ? a : c)
                 : (b.toString().compareTo(c.toString()) > 0 ? b : c));
         return d;
+    }
+
+    public static <T> T getMaxNumber(T... params) {
+        Arrays.sort(params);
+        return params[params.length - 1];
     }
 
 }

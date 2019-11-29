@@ -70,20 +70,41 @@ public class MaxNumberTest {
 
     @Test
     public void givenMaxNumber_ShouldReturn_theSameNumberGenerics_Integer() {
-        MaximumNumber m1 = new MaximumNumber(10,20,30);
-        Assert.assertEquals(30,m1.getMaxNumber());
+        MaximumNumber m1 = new MaximumNumber(10, 20, 30);
+        Assert.assertEquals(30, m1.getMaxNumber());
     }
 
     @Test
     public void givenMaxNumber_ShouldReturn_theSameNumberGenerics_Float() {
-        MaximumNumber m1 = new MaximumNumber(10.10,20.10,30.10);
-        Assert.assertEquals(30.10,m1.getMaxNumber());
+        MaximumNumber m1 = new MaximumNumber(10.10, 20.10, 30.10);
+        Assert.assertEquals(30.10, m1.getMaxNumber());
     }
 
     @Test
     public void givenMaxNumber_ShouldReturn_theSameNumberGenerics_String() {
         MaximumNumber m1 = new MaximumNumber("AAA", "BBB", "CCC");
-        Assert.assertEquals("CCC",m1.getMaxNumber());
+        Assert.assertEquals("CCC", m1.getMaxNumber());
+    }
+
+    @Test
+    public void givenMaxNumber_ShouldReturn_theSameNumberGenerics_Integer_MoreThan3_Parameters() {
+        MaximumNumber m1 = new MaximumNumber();
+        Integer result = m1.getMaxNumber(10, 20, 30, 40, 50, 60);
+        Assert.assertEquals(Integer.valueOf(60), result);
+    }
+
+    @Test
+    public void givenMaxNumber_ShouldReturn_theSameNumberGenerics_Float_MoreThan3_Parameters() {
+        MaximumNumber m1 = new MaximumNumber();
+        Float result = m1.getMaxNumber(10.10f, 20.10f, 30.10f, 40.10f, 50.10f, 60.10f);
+        Assert.assertEquals(Float.valueOf(60.10f), result);
+    }
+
+    @Test
+    public void givenMaxNumber_ShouldReturn_theSameNumberGenerics_String_MoreThan3_Parameters() {
+        MaximumNumber m1 = new MaximumNumber();
+        String result = m1.getMaxNumber("AAA", "BBB", "CCC", "DDD", "EEE");
+        Assert.assertEquals(String.valueOf("CCC"), result);
     }
 
 }
