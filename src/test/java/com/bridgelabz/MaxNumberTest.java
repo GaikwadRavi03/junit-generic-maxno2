@@ -54,4 +54,11 @@ public class MaxNumberTest {
         Assert.assertEquals(String.valueOf("CCC"), result);
     }
 
+    @Test
+    public void givenMaxNumberAt_2nd_Position_ShouldReturn_theSameNumberForString() {
+        MaximumNumber m1 = new MaximumNumber();
+        String result = m1.getMaxNumber("BBB", "CCC", "AAA");
+        Assert.assertEquals(String.valueOf("CCC"), result);
+    }
+
 }
