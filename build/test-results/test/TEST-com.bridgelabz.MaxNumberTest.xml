@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bridgelabz.MaxNumberTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-29T15:18:00" hostname="admin141-desktop" time="0.002">
+  <properties/>
+  <testcase name="givenMethodShouldReturn_MaxNumber_ForInteger" classname="com.bridgelabz.MaxNumberTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
