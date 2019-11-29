@@ -33,4 +33,10 @@ public class MaxNumberTest {
         Assert.assertEquals(Float.valueOf(40.10f), result);
     }
 
+    @Test
+    public void givenMaxNumberAt_2nd_Position_ShouldReturn_theSameNumberForFloat() {
+        MaximumNumber m1 = new MaximumNumber();
+        Float result = m1.getMaxNumber(10.10f, 40.10f, 30.10f);
+        Assert.assertEquals(Float.valueOf(40.10f), result);
+    }
 }
