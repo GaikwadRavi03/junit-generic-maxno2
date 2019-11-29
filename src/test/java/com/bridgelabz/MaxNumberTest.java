@@ -68,4 +68,22 @@ public class MaxNumberTest {
         Assert.assertEquals(String.valueOf("CCC"), result);
     }
 
+    @Test
+    public void givenMaxNumber_ShouldReturn_theSameNumberGenerics_Integer() {
+        MaximumNumber m1 = new MaximumNumber(10,20,30);
+        Assert.assertEquals(30,m1.getMaxNumber());
+    }
+
+    @Test
+    public void givenMaxNumber_ShouldReturn_theSameNumberGenerics_Float() {
+        MaximumNumber m1 = new MaximumNumber(10.10,20.10,30.10);
+        Assert.assertEquals(30.10,m1.getMaxNumber());
+    }
+
+    @Test
+    public void givenMaxNumber_ShouldReturn_theSameNumberGenerics_String() {
+        MaximumNumber m1 = new MaximumNumber("AAA", "BBB", "CCC");
+        Assert.assertEquals("CCC",m1.getMaxNumber());
+    }
+
 }
