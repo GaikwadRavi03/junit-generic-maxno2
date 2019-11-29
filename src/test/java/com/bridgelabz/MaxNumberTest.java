@@ -39,10 +39,19 @@ public class MaxNumberTest {
         Float result = m1.getMaxNumber(10.10f, 40.10f, 30.10f);
         Assert.assertEquals(Float.valueOf(40.10f), result);
     }
+
     @Test
     public void givenMaxNumberAt_3rd_Position_ShouldReturn_theSameNumberForFloat() {
         MaximumNumber m1 = new MaximumNumber();
         Float result = m1.getMaxNumber(10.10f, 20.10f, 40.10f);
         Assert.assertEquals(Float.valueOf(40.10f), result);
     }
+
+    @Test
+    public void givenMaxNumberAt_1stPosition_ShouldReturn_theSameNumberForString() {
+        MaximumNumber m1 = new MaximumNumber();
+        String result = m1.getMaxNumber("CCC", "BBB", "AAA");
+        Assert.assertEquals(String.valueOf("CCC"), result);
+    }
+
 }
